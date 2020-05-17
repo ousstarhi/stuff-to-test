@@ -13,3 +13,13 @@ for (let i = 0; i < myArray.length; i += 1) {
 	}
 }
 console.log(myArray.join(''));
+
+//primitive data types are passed to function by value.
+let a = 10;
+let myArr0 = [1, 2, 3];
+const setInt = (x) => (x = 22);
+let b = setInt(a);
+console.log(b, a);
+const setArr = (arr) => (arr[0] = 22);
+setArr(myArr0);
+console.log(myArr0);
